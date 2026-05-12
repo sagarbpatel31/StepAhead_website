@@ -5,7 +5,7 @@ import site from "@/content/site.json";
 export default function HowWeHelp() {
   const s = site.howWeHelp;
   return (
-    <section className="bg-gray-50 py-16 md:py-20 lg:py-24">
+    <section className="overflow-x-hidden bg-gray-50 py-16 md:py-20 lg:py-24">
       <div className="mx-auto max-w-[1536px] px-6 md:px-12 lg:px-20">
 
         <h2 className="text-center font-sans text-3xl font-bold text-blue-950 md:text-4xl lg:text-5xl">
@@ -16,26 +16,26 @@ export default function HowWeHelp() {
         </p>
 
         {/* Mobile: stacked. Desktop: side by side */}
-        <div className="mt-10 flex flex-col items-center gap-10 md:mt-16 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+        <div className="mt-10 flex flex-col items-center gap-10 md:mt-16 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
 
           {/* Phones — composite + overlay */}
-          <div className="relative w-full max-w-sm md:max-w-md lg:max-w-none lg:flex-shrink-0">
+          <div className="relative w-full max-w-sm md:max-w-md lg:w-auto lg:flex-shrink-0">
             <Image
               src={s.image}
               alt="StepAhead app screens"
               width={620}
               height={554}
               priority
-              className="w-full h-auto lg:w-[520px] xl:w-[620px]"
+              className="w-full h-auto lg:w-[440px] xl:w-[560px]"
             />
-            {/* Purple-framed phone — hidden on mobile, shown md+ */}
-            <div className="absolute bottom-0 right-0 hidden md:block md:right-[-60px] lg:right-[-80px]">
+            {/* Purple-framed phone — hidden on mobile, shown lg+ only to avoid overflow */}
+            <div className="absolute bottom-0 right-0 hidden lg:block lg:right-[-60px] xl:right-[-80px]">
               <PhoneFrame screen="/images/phones/movement.png" orientation="portrait" />
             </div>
           </div>
 
           {/* Testimonial */}
-          <figure className="w-full max-w-sm md:max-w-md lg:max-w-[480px] xl:max-w-[500px] lg:flex-shrink-0">
+          <figure className="w-full min-w-0 max-w-sm md:max-w-md lg:max-w-[420px] xl:max-w-[500px]">
             <div className="mb-6 flex flex-col items-center gap-4">
               <Image
                 src={s.testimonial.avatar}
