@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="844" height="390" viewBox="0 0 844 390" fill="none">
+  <defs>
+    <mask id="screen-mask">
+      <rect width="844" height="390" fill="white"/>
+      <rect x="14" y="14" width="816" height="362" rx="44" ry="44" fill="black"/>
+    </mask>
+  </defs>
+  <!-- Body with screen hole punched out -->
+  <rect x="0" y="0" width="844" height="390" rx="54" ry="54" fill="#18122B" mask="url(#screen-mask)"/>
+  <!-- Outer border ring -->
+  <rect x="1.5" y="1.5" width="841" height="387" rx="53" ry="53" fill="none" stroke="#4a3580" stroke-width="3"/>
+  <!-- Inner screen border -->
+  <rect x="12" y="12" width="820" height="366" rx="46" ry="46" fill="none" stroke="#2a1f4e" stroke-width="2"/>
+  <!-- Dynamic Island (landscape — left side) -->
+  <rect x="22" y="140" width="36" height="110" rx="18" ry="18" fill="#18122B"/>
+  <!-- Top buttons — mute -->
+  <rect x="108" y="0" width="34" height="4" rx="2" fill="#4a3580"/>
+  <!-- Top buttons — volume up -->
+  <rect x="158" y="0" width="52" height="4" rx="2" fill="#4a3580"/>
+  <!-- Top buttons — volume down -->
+  <rect x="222" y="0" width="52" height="4" rx="2" fill="#4a3580"/>
+  <!-- Bottom button — power -->
+  <rect x="188" y="386" width="80" height="4" rx="2" fill="#4a3580"/>
+</svg>

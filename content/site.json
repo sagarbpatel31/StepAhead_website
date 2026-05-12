@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "links": ["Product", "Resources", "About Us", "FAQ"],
+    "cta": "Get Ahead Now"
+  },
+  "hero": {
+    "logo": "/images/logo.svg",
+    "title": "Peace of Mind Every Step of the Way",
+    "subLight": "Track Your Baby's Development with AI Powered Insights",
+    "cta": "Get Ahead Now",
+    "image": "/images/hero.jpg"
+  },
+  "features": [
+    { "icon": "/images/icons/track.svg",   "title": "Track your child's motor development", "body": "Easily monitor your child's motor milestones and uncover delays." },
+    { "icon": "/images/icons/compare.svg", "title": "Compare progress over time",            "body": "Track your child's progress to gain valuable insights." },
+    { "icon": "/images/icons/share.svg",   "title": "Share findings and consult experts",   "body": "Share your results with professionals." },
+    { "icon": "/images/icons/inform.svg",  "title": "Stay informed",                         "body": "Access the latest research and trends in child motor development to keep up with best practices." }
+  ],
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "StepAhead's AI model analyzes your baby's movements in real-time, giving you expert insights to confidently track every milestone",
+    "steps": [
+      {
+        "title": "Record",
+        "body": "Capture short videos of your baby's movements",
+        "image": "/images/phones/record-phone.png",
+        "extra": "/images/phones/record-stick.png"
+      },
+      {
+        "title": "Analyze",
+        "body": "Let StepAhead's AI assess developmental milestones.",
+        "image": "/images/phones/analyze.png"
+      },
+      {
+        "title": "Track",
+        "body": "Receive personalized insights and guidance on your child's progress.",
+        "image": "/images/phones/track.png"
+      }
+    ]
+  },
+  "howWeHelp": {
+    "title": "How We Help",
+    "subtitle": "Detailed AI-powered movement analysis unlocks unrivaled insights for your babies development",
+    "image": "/images/phones/help.png",
+    "testimonial": {
+      "avatar": "/images/sarah.jpg",
+      "name": "Sarah & Emily",
+      "quote": "StepAhead has been a game-changer for me! The app noticed Emily was behind on some motor skills, which I hadn't realized. Thanks to their insights and support, she's back on track. It's such a relief knowing her development isn't all on me!"
+    }
+  },
+  "mission": {
+    "text": "We're not only dedicated to our groundbreaking product and technology; our unwavering dedication to your babies health ensures we're with you every step of the way!",
+    "cta": "Our Team"
+  },
+  "faq": {
+    "title": "FAQ",
+    "items": [
+      "How does StepAhead track my baby's motor development?",
+      "How quickly will I receive insights after uploading a video?",
+      "Is StepAhead suitable for all ages of infants?"
+    ]
+  },
+  "footer": {
+  "logo": "/images/logo.svg",
+  "store": { "img": "/images/store.svg", "alt": "Download on the App Store and Google Play" },
+  "columns": [
+    { "title": "Product",   "links": ["Demo"] },
+    { "title": "Resources", "links": ["Articles", "Knowledge Base", "Validation"] },
+    { "title": "StepAhead", "links": ["About Us", "FAQ"] }
+  ],
+  "contact": {
+    "email": "info@stepahead.ai",
+    "addressLines": [
+      "2800 Neilson Street",
+      "Building 4, Suite 1204",
+      "Santa Monica, CA 94306"
+    ],
+    "copyright": "© 2026 StepAhead"
+  },
+  "legal": ["Terms", "Privacy", "Copyright"]
+  }
+}

@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-deep: #080E62;
+  --brand-deeper: #12026B;
+  --accent-orange: #F26522;
+  --accent-blue: #0C399A;
+}
+html, body { background:#fff; color: var(--brand-deep); }
+
+.f-hero    { font-size: 52.382px; line-height: 1.05; font-weight: 700; }
+.f-h1      { font-size: 64px;     line-height: 1.1;  font-weight: 700; }
+.f-h3      { font-size: 40px;     line-height: 1.1;  font-weight: 700; }
+.f-h4      { font-size: 36.567px; line-height: 1.4;  font-weight: 700; }
+.f-subhead { font-size: 36px;     line-height: 1.4;  font-weight: 700; }
+.f-cta     { font-size: 31.114px; line-height: 1.5;  letter-spacing: -0.342px; font-weight: 700; }
+.f-body-lg { font-size: 32px;     line-height: 1.25; font-weight: 500; }
+.f-body    { font-size: 24.378px; line-height: 1.6;  font-weight: 400; }
+.f-meta    { font-size: 20px;     line-height: 1.7;  font-weight: 400; }
+
+.btn-cta {
+  @apply inline-flex items-center justify-center rounded-xl px-9 py-3.5 text-white;
+  background-image: linear-gradient(180deg, #F26522 0%, #C84A12 100%);
+}
+
+.btn-cta-hero {
+  @apply inline-flex items-center justify-center gap-6 rounded-xl bg-sky-50 px-6 py-6;
+  outline: 4px solid #12026B;
+  outline-offset: -4.06px;
+}
