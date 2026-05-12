@@ -6,32 +6,33 @@ type Props = {
   className?: string;
 };
 
-// Portrait native: 195×422. Landscape native: 422×195.
-// On mobile we scale down via CSS transform so fixed px layout doesn't overflow.
-// scale() shrinks visually without affecting document flow — wrap in a sized container.
-
 export default function PhoneFrame({
   screen,
   orientation = "portrait",
   className = "",
 }: Props) {
   if (orientation === "landscape") {
+    // Native: 422×195. Scale: 0.7 mobile, 0.85 md, 1.0 lg+
     return (
-      // Outer box reserves space at scaled size (mobile: 0.7× = ~295×137, md: 0.85× = ~359×166, lg+: 1×)
-      <div className={`relative ${className} w-[295px] h-[137px] md:w-[359px] md:h-[166px] lg:w-[422px] lg:h-[195px]`}>
+      <div className={`relative ${className} h-[137px] w-[295px] md:h-[166px] md:w-[359px] lg:h-[195px] lg:w-[422px]`}>
         <div
           className="absolute left-0 top-0 origin-top-left scale-[0.7] md:scale-[0.85] lg:scale-100"
           style={{ width: 422, height: 195 }}
         >
-          <div className="absolute" style={{ left: 11, top: 11, width: 400, height: 173, overflow: "hidden", borderRadius: 18 }}>
-            <Image src={screen} alt="" fill className="object-cover" sizes="400px" />
-          </div>
+          {/* Screen — plain img avoids Next fill positioning issues */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={screen}
+            alt=""
+            style={{ position: "absolute", left: 11, top: 11, width: 400, height: 173, borderRadius: 18, objectFit: "cover" }}
+          />
+          {/* Frame overlay */}
           <Image
             src="/images/phones/frame-landscape.svg"
             alt=""
             width={422}
             height={195}
-            className="absolute inset-0 pointer-events-none"
+            className="pointer-events-none absolute inset-0"
             style={{ width: 422, height: 195 }}
           />
         </div>
@@ -39,23 +40,27 @@ export default function PhoneFrame({
     );
   }
 
-  // Portrait native 195×422
-  // mobile: 0.75× = ~146×317, md: 0.85× = ~166×359, lg+: 1×
+  // Portrait native 195×422. Scale: 0.75 mobile, 0.85 md, 1.0 lg+
   return (
-    <div className={`relative ${className} w-[146px] h-[317px] md:w-[166px] md:h-[359px] lg:w-[195px] lg:h-[422px]`}>
+    <div className={`relative ${className} h-[317px] w-[146px] md:h-[359px] md:w-[166px] lg:h-[422px] lg:w-[195px]`}>
       <div
         className="absolute left-0 top-0 origin-top-left scale-[0.75] md:scale-[0.85] lg:scale-100"
         style={{ width: 195, height: 422 }}
       >
-        <div className="absolute" style={{ left: 11, top: 11, width: 173, height: 400, overflow: "hidden", borderRadius: 18 }}>
-          <Image src={screen} alt="" fill className="object-cover" sizes="173px" />
-        </div>
+        {/* Screen */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={screen}
+          alt=""
+          style={{ position: "absolute", left: 11, top: 11, width: 173, height: 400, borderRadius: 18, objectFit: "cover" }}
+        />
+        {/* Frame overlay */}
         <Image
           src="/images/phones/frame-portrait.svg"
           alt=""
           width={195}
           height={422}
-          className="absolute inset-0 pointer-events-none"
+          className="pointer-events-none absolute inset-0"
           style={{ width: 195, height: 422 }}
         />
       </div>
