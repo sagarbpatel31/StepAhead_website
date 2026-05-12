@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1536px] px-6 py-10 md:px-12 md:py-14 lg:px-20 lg:py-16">
 
         {/* Main grid */}
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.4fr] lg:gap-12">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-3 md:gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.4fr] lg:gap-12">
 
           {/* Col 1 — logo + store badges */}
           <div className="flex flex-col gap-5">
