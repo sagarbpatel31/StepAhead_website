@@ -4,17 +4,24 @@ import site from "@/content/site.json";
 export default function Hero() {
   const { hero } = site;
   return (
-    <section className="relative min-h-[987px] w-full overflow-hidden">
+    <section className="relative min-h-[600px] w-full overflow-hidden md:min-h-[800px] lg:min-h-[987px]">
       <Image src={hero.image} alt="" fill priority className="object-cover" />
-      <div className="relative z-10 mx-auto flex max-w-frame flex-col gap-8 px-20 pt-44">
-        <Image src={hero.logo} alt="StepAhead" width={689} height={188} priority />
-        <h1 className="max-w-[667px] font-sans text-4xl font-bold text-blue-950">
+      <div className="relative z-10 mx-auto flex max-w-[1536px] flex-col gap-6 px-6 pt-28 md:gap-8 md:px-12 md:pt-36 lg:px-20 lg:pt-44">
+        <Image
+          src={hero.logo}
+          alt="StepAhead"
+          width={689}
+          height={188}
+          priority
+          className="w-48 md:w-80 lg:w-[450px] xl:w-[689px] h-auto"
+        />
+        <h1 className="max-w-xl font-sans text-2xl font-bold text-blue-950 md:text-3xl lg:text-4xl xl:max-w-[667px]">
           {hero.title}
         </h1>
-        <p className="max-w-[506px] font-sans text-3xl font-normal text-blue-950">
+        <p className="max-w-lg font-sans text-lg font-normal text-blue-950 md:text-2xl lg:text-3xl xl:max-w-[506px]">
           {hero.subLight}
         </p>
-        <a href="#cta" className="btn-cta-hero w-fit font-sans text-2xl font-bold leading-10 text-blue-950">
+        <a href="#cta" className="btn-cta-hero w-fit font-sans text-base font-bold leading-8 text-blue-950 md:text-xl lg:text-2xl">
           {hero.cta}
         </a>
       </div>
