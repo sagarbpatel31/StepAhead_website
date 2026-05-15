@@ -9,7 +9,17 @@ export default function HowItWorks() {
   const [record, analyze, track] = s.steps as Step[];
 
   return (
-    <section className="bg-gray-100 py-16 text-center md:py-20 lg:py-24">
+    <section className="relative overflow-hidden py-16 text-center md:py-20 lg:py-24">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/videos/how-it-works-poster.jpg"
+        className="absolute inset-0 size-full object-cover -z-10"
+      >
+        <source src="/videos/how-it-works.mp4" type="video/mp4" />
+      </video>
       <div className="mx-auto max-w-[1536px] px-6 md:px-12 lg:px-20">
 
         <h2 className="font-sans text-3xl font-bold leading-tight text-violet-950 md:text-4xl lg:text-5xl">
