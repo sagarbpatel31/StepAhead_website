@@ -12,10 +12,10 @@ export default function Features() {
               <li key={f.title} className="flex items-start gap-4 md:gap-5">
                 <Image src={f.icon} alt="" width={48} height={48} className="mt-2 shrink-0 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />
                 <div>
-                  <h3 className="font-sans text-xl font-bold text-blue-950 leading-tight md:text-2xl lg:text-3xl xl:text-4xl xl:leading-[71px]">
+                  <h3 className="font-sans text-xl font-bold text-blue-950 leading-tight md:text-2xl lg:text-3xl xl:text-4xl xl:leading-snug">
                     {f.title}
                   </h3>
-                  <p className="font-sans text-base font-normal text-blue-950 md:text-lg lg:text-xl xl:text-2xl xl:leading-[51px]">
+                  <p className="font-sans text-base font-normal text-blue-950 md:text-lg lg:text-xl xl:text-2xl xl:leading-normal">
                     {f.body}
                   </p>
                 </div>

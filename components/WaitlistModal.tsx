@@ -14,21 +14,32 @@ function detectType(v: string): "email" | "phone" | null {
 export default function WaitlistModal() {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const [isOpen, setIsOpen] = useState(false);
   const [value, setValue] = useState("");
   const [error, setError] = useState("");
   const [status, setStatus] = useState<Status>("idle");
 
+  // Listen for open trigger from any button on the page
   useEffect(() => {
-    const open = () => {
-      dialogRef.current?.showModal();
-      setTimeout(() => inputRef.current?.focus(), 50);
-    };
+    const open = () => setIsOpen(true);
     window.addEventListener("open-waitlist", open);
     return () => window.removeEventListener("open-waitlist", open);
   }, []);
 
+  // Drive native <dialog> open/close via state (avoids stale-ref issue)
+  useEffect(() => {
+    const el = dialogRef.current;
+    if (!el) return;
+    if (isOpen) {
+      el.showModal();
+      setTimeout(() => inputRef.current?.focus(), 50);
+    } else if (el.open) {
+      el.close();
+    }
+  }, [isOpen]);
+
   function close() {
-    dialogRef.current?.close();
+    setIsOpen(false);
     setValue("");
     setError("");
     setStatus("idle");
