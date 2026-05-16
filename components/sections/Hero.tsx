@@ -5,9 +5,9 @@ import site from "@/content/site.json";
 export default function Hero() {
   const { hero } = site;
   return (
-    <section className="relative min-h-[600px] w-full overflow-hidden md:min-h-[800px] lg:min-h-[987px]">
+    <section className="relative min-h-[480px] w-full overflow-hidden md:min-h-[560px] lg:min-h-[640px]">
       <Image src={hero.image} alt="" fill priority className="object-cover" />
-      <div className="relative z-10 mx-auto flex max-w-[1536px] flex-col gap-6 px-6 pt-28 md:gap-8 md:px-12 md:pt-36 lg:px-20 lg:pt-44">
+      <div className="relative z-10 mx-auto flex max-w-[1536px] flex-col gap-6 px-6 pt-24 md:gap-8 md:px-12 md:pt-28 lg:px-20 lg:pt-32">
         <Image
           src={hero.logo}
           alt="StepAhead"

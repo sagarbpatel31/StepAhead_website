@@ -4,7 +4,7 @@ import site from "@/content/site.json";
 export default function Features() {
   return (
     <section className="bg-brand-tint">
-      <div className="mx-auto max-w-[1536px] px-6 py-10 md:px-12 md:py-12 lg:px-20 lg:py-16">
+      <div className="mx-auto max-w-[1536px] px-6 pt-6 pb-10 md:px-12 md:pt-8 md:pb-12 lg:px-20 lg:pt-10 lg:pb-16">
         <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
           {/* Left column — icons + headings + body */}
           <ul className="w-full space-y-6 lg:max-w-[55%]">
