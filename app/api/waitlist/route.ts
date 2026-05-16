@@ -1,5 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
-import { kv } from "@vercel/kv";
+import { createClient } from "@supabase/supabase-js";
+
+function getSupabase() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!
+  );
+}
 
 export type WaitlistEntry = {
   value: string;
@@ -16,13 +23,16 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Missing fields" }, { status: 400 });
   }
 
-  const entry: WaitlistEntry = { value, type, timestamp };
+  const { error } = await getSupabase()
+    .from("waitlist")
+    .insert({ value, type, timestamp });
 
-  // Store in a Redis list (newest first) and increment a counter
-  await kv.lpush("waitlist", JSON.stringify(entry));
-  await kv.incr("waitlist:count");
+  if (error) {
+    console.error("[waitlist] insert error:", error.message);
+    return NextResponse.json({ error: "Storage error" }, { status: 500 });
+  }
 
-  console.log("[waitlist] stored:", entry);
+  console.log("[waitlist] stored:", { value, type, timestamp });
   return NextResponse.json({ ok: true });
 }
 
@@ -34,9 +44,14 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const raw = await kv.lrange("waitlist", 0, -1);
-  const entries = (raw as string[]).map((r) => JSON.parse(r) as WaitlistEntry);
-  const count = (await kv.get<number>("waitlist:count")) ?? entries.length;
+  const { data, error, count } = await getSupabase()
+    .from("waitlist")
+    .select("*", { count: "exact" })
+    .order("created_at", { ascending: false });
 
-  return NextResponse.json({ count, entries });
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+
+  return NextResponse.json({ count, entries: data });
 }
