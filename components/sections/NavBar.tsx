@@ -33,12 +33,13 @@ export default function NavBar() {
         </button>
 
         {/* CTA button */}
-        <a
-          href="#cta"
+        <button
+          type="button"
+          onClick={() => window.dispatchEvent(new CustomEvent("open-waitlist"))}
           className="rounded-lg bg-sky-50 px-4 py-2 font-sans text-sm font-bold text-blue-950 outline outline-[2px] outline-offset-[-2px] outline-violet-950 md:px-5 md:py-3 md:text-base lg:px-6 lg:text-xl"
         >
           {site.nav.cta}
-        </a>
+        </button>
       </nav>
 
       {/* Mobile dropdown */}

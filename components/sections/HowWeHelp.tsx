@@ -5,7 +5,7 @@ import site from "@/content/site.json";
 export default function HowWeHelp() {
   const s = site.howWeHelp;
   return (
-    <section className="overflow-x-hidden bg-gray-50 py-16 md:py-20 lg:py-24">
+    <section className="overflow-x-hidden bg-gray-50 py-10 md:py-12 lg:py-16">
       <div className="mx-auto max-w-[1536px] px-6 md:px-12 lg:px-20">
 
         <h2 className="text-center font-sans text-3xl font-bold text-blue-950 md:text-4xl lg:text-5xl">

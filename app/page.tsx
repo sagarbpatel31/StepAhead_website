@@ -6,6 +6,7 @@ import HowWeHelp from "@/components/sections/HowWeHelp";
 import MissionBanner from "@/components/sections/MissionBanner";
 import FAQ from "@/components/sections/FAQ";
 import Footer from "@/components/sections/Footer";
+import WaitlistModal from "@/components/WaitlistModal";
 
 export default function Page() {
   return (
@@ -18,6 +19,7 @@ export default function Page() {
       <MissionBanner />
       <FAQ />
       <Footer />
+      <WaitlistModal />
     </main>
   );
 }

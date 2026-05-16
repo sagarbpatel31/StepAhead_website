@@ -1,13 +1,13 @@
 {
   "nav": {
     "links": ["Product", "Resources", "About Us", "FAQ"],
-    "cta": "Get Ahead Now"
+    "cta": "Join the Waitlist"
   },
   "hero": {
     "logo": "/images/logo.svg",
     "title": "Peace of Mind Every Step of the Way",
     "subLight": "Track Your Baby's Development with AI Powered Insights",
-    "cta": "Get Ahead Now",
+    "cta": "Join the Waitlist",
     "image": "/images/hero.jpg"
   },
   "features": [
@@ -71,12 +71,8 @@
     { "title": "StepAhead", "links": ["About Us", "FAQ"] }
   ],
   "contact": {
-    "email": "info@stepahead.ai",
-    "addressLines": [
-      "2800 Neilson Street",
-      "Building 4, Suite 1204",
-      "Santa Monica, CA 94306"
-    ],
+    "email": "hello@stepahead-placeholder.com",
+    "addressLines": [],
     "copyright": "© 2026 StepAhead"
   },
   "legal": ["Terms", "Privacy", "Copyright"]

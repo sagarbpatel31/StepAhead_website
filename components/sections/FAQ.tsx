@@ -5,7 +5,7 @@ import site from "@/content/site.json";
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section className="mx-auto max-w-[1182px] px-6 py-16 md:px-12 md:py-24 lg:py-32">
+    <section className="mx-auto max-w-[1182px] px-6 py-10 md:px-12 md:py-16 lg:py-20">
       <h2 className="text-center font-sans text-3xl font-bold text-brand-deeper md:text-4xl lg:text-5xl">{site.faq.title}</h2>
       <ul className="mt-10">
         {site.faq.items.map((q, i) => (

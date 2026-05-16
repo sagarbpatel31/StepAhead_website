@@ -9,7 +9,7 @@ export default function HowItWorks() {
   const [record, analyze, track] = s.steps as Step[];
 
   return (
-    <section className="relative isolate overflow-hidden py-16 text-center md:py-20 lg:py-24">
+    <section className="relative isolate overflow-hidden py-10 text-center md:py-12 lg:py-16">
       <video
         autoPlay
         muted
