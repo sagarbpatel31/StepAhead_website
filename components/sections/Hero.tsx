@@ -1,5 +1,5 @@
-"use client";
 import Image from "next/image";
+import Link from "next/link";
 import site from "@/content/site.json";
 
 export default function Hero() {
@@ -24,13 +24,12 @@ export default function Hero() {
         <p className="max-w-lg font-sans text-lg font-normal text-blue-950 md:text-2xl lg:text-3xl xl:max-w-[506px]">
           {hero.subLight}
         </p>
-        <button
-          type="button"
-          onClick={() => window.dispatchEvent(new CustomEvent("open-waitlist"))}
+        <Link
+          href="/waitlist"
           className="btn-cta-hero w-fit font-sans text-base font-bold leading-8 text-blue-950 md:text-xl lg:text-2xl"
         >
           {hero.cta}
-        </button>
+        </Link>
       </div>
     </section>
   );
