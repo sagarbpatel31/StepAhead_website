@@ -6,9 +6,9 @@ export const metadata = { title: "Join the Waitlist — StepAhead" };
 
 export default function WaitlistPage() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col bg-brand-tint">
       <NavBar />
-      <main className="min-h-screen bg-brand-tint flex items-center justify-center px-6 py-32 md:px-12 lg:px-20">
+      <main className="flex-1 flex items-center justify-center px-6 pt-28 pb-12 md:px-12 md:pt-32 lg:px-20">
         <div className="w-full max-w-5xl rounded-2xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
 
           {/* Left — dark panel */}
@@ -53,6 +53,6 @@ export default function WaitlistPage() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
