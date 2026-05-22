@@ -10,6 +10,11 @@ export default function NavBar() {
       <nav className="mx-auto flex max-w-[1536px] items-center justify-between px-6 py-4 md:px-12 md:py-0 md:h-24 lg:px-20 lg:h-28">
         {/* Desktop links */}
         <ul className="hidden md:flex md:gap-8 lg:gap-16 xl:gap-24">
+          <li className="flex items-center py-2">
+            <Link href="/" className="font-sans text-lg font-bold text-white lg:text-2xl xl:text-3xl">
+              Home
+            </Link>
+          </li>
           {site.nav.links.map((l) => (
             <li key={l} className="flex items-center py-2">
               <a
@@ -45,6 +50,11 @@ export default function NavBar() {
       {/* Mobile dropdown */}
       {open && (
         <ul className="flex flex-col gap-4 bg-violet-950 px-6 pb-6 md:hidden">
+          <li>
+            <Link href="/" className="block font-sans text-xl font-bold text-white" onClick={() => setOpen(false)}>
+              Home
+            </Link>
+          </li>
           {site.nav.links.map((l) => (
             <li key={l}>
               <a
