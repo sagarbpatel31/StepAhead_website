@@ -1,5 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import site from "@/content/site.json";
+
+function footerLinkHref(label: string): string {
+  if (label === "About Us") return "/about";
+  if (label === "FAQ") return "/#faq";
+  return "#";
+}
 
 export default function Footer() {
   const f = site.footer;
@@ -39,9 +46,9 @@ export default function Footer() {
               <ul className="space-y-2">
                 {c.links.map((l) => (
                   <li key={l}>
-                    <a href="#" className="font-sans text-sm text-white/80 hover:text-white hover:underline md:text-base">
+                    <Link href={footerLinkHref(l)} className="font-sans text-sm text-white/80 hover:text-white hover:underline md:text-base">
                       {l}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

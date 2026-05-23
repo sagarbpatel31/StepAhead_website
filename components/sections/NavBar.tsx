@@ -3,6 +3,13 @@ import { useState } from "react";
 import Link from "next/link";
 import site from "@/content/site.json";
 
+/** Map nav link labels to their destination href */
+function navHref(label: string): string {
+  if (label === "About Us") return "/about";
+  if (label === "FAQ") return "/#faq";
+  return `/#${label.toLowerCase().replace(/\s+/g, "-")}`;
+}
+
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   return (
@@ -17,12 +24,12 @@ export default function NavBar() {
           </li>
           {site.nav.links.map((l) => (
             <li key={l} className="flex items-center py-2">
-              <a
-                href={`#${l.toLowerCase().replace(/\s+/g, "-")}`}
+              <Link
+                href={navHref(l)}
                 className="font-sans text-lg font-bold text-white lg:text-2xl xl:text-3xl"
               >
                 {l}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -57,13 +64,13 @@ export default function NavBar() {
           </li>
           {site.nav.links.map((l) => (
             <li key={l}>
-              <a
-                href={`#${l.toLowerCase().replace(/\s+/g, "-")}`}
+              <Link
+                href={navHref(l)}
                 className="block font-sans text-xl font-bold text-white"
                 onClick={() => setOpen(false)}
               >
                 {l}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
