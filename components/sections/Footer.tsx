@@ -12,7 +12,7 @@ export default function Footer() {
   const f = site.footer;
   return (
     <footer className="bg-brand-deep text-white">
-      <div className="mx-auto max-w-[1536px] px-6 py-6 md:px-12 md:py-8 lg:px-20 lg:py-10">
+      <div className="mx-auto max-w-[1536px] px-6 pt-6 pb-2 md:px-12 md:pt-8 md:pb-3 lg:px-20 lg:pt-10 lg:pb-3">
 
         {/* Main grid */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-3 md:gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.4fr] lg:gap-12">
