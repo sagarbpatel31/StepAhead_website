@@ -63,23 +63,48 @@ export default function AboutPage() {
         </svg>
       </div>
 
-      {/* Story / Mission / Values */}
-      <section className="px-6 py-16 md:px-12 md:py-20 lg:px-20 lg:py-24">
-        <div className="mx-auto max-w-4xl space-y-16">
-          {sections.map((s, i) => (
-            <div key={s.label} className={`flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-16 ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-              {/* Label pill */}
-              <div className="lg:w-48 lg:shrink-0 lg:pt-1">
-                <span className="inline-block rounded-full bg-brand-tint px-4 py-1.5 font-sans text-sm font-bold text-brand-deep">
-                  {s.label}
-                </span>
-              </div>
-              {/* Body */}
-              <p className="font-sans text-base leading-relaxed text-gray-700 md:text-lg lg:text-xl">
-                {s.body}
-              </p>
+      {/* Our Story — full width centered */}
+      <section className="border-b border-gray-100 px-6 py-16 md:px-12 md:py-20 lg:px-20 lg:py-24">
+        <div className="mx-auto max-w-3xl">
+          <div className="mb-2 flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-brand-orange" />
+            <span className="font-sans text-xs font-semibold uppercase tracking-widest text-brand-orange">Our Story</span>
+          </div>
+          <h2 className="mb-6 font-sans text-3xl font-bold text-brand-deep md:text-4xl">Our Story</h2>
+          <p className="font-sans text-base leading-relaxed text-gray-700 md:text-lg lg:text-xl">
+            StepAhead was founded by Dalina Delfing and Sagar Patel. Dalina, a kinesiology PhD from Columbia&apos;s Center for Cerebral Palsy Research, has lived experience with cerebral palsy that went undetected in her own early childhood. After years of research at the intersection of computer vision and pediatric rehabilitation, she recognized a gap no tool had filled: families needed a way to document what they were observing, and clinicians lacked the objective movement data needed to make informed recommendations and treatment decisions. Together with Sagar, whose expertise spans AI, computer vision, and production software systems, they built StepAhead — a smartphone-based tool that turns everyday video into structured, shareable movement observations.
+          </p>
+        </div>
+      </section>
+
+      {/* Our Mission + Our Values — side by side */}
+      <section className="bg-gray-50 px-6 py-16 md:px-12 md:py-20 lg:px-20 lg:py-24">
+        <div className="mx-auto max-w-5xl grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+
+          {/* Mission */}
+          <div>
+            <div className="mb-2 flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-brand-orange" />
+              <span className="font-sans text-xs font-semibold uppercase tracking-widest text-brand-orange">Our Mission</span>
             </div>
-          ))}
+            <h2 className="mb-5 font-sans text-3xl font-bold text-brand-deep md:text-4xl">Our Mission</h2>
+            <p className="font-sans text-base leading-relaxed text-gray-700 md:text-lg">
+              StepAhead exists to help families and clinicians notice more, earlier. Our tool is designed to support — not replace — clinical judgment. By giving parents a way to capture and track movement patterns over time, and giving clinicians structured observations to inform their assessments, we help ensure no red flag goes unshared and no referral comes too late.
+            </p>
+          </div>
+
+          {/* Values */}
+          <div>
+            <div className="mb-2 flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-brand-orange" />
+              <span className="font-sans text-xs font-semibold uppercase tracking-widest text-brand-orange">Our Values</span>
+            </div>
+            <h2 className="mb-5 font-sans text-3xl font-bold text-brand-deep md:text-4xl">Our Values</h2>
+            <p className="font-sans text-base leading-relaxed text-gray-700 md:text-lg">
+              Every child deserves early support. We&apos;re here to make sure nothing gets in the way of that. StepAhead is an observational tool grounded in peer-reviewed movement science. Every feature we build is designed with one principle in mind: get the right information to the right clinician at the right time, so families can access the care their child may need.
+            </p>
+          </div>
+
         </div>
       </section>
 
