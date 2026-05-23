@@ -1,95 +1,96 @@
-# StepAhead — Capstone Website (Next.js + Tailwind, Vercel-ready)
+# StepAhead — Marketing Website
 
-Pixel-perfect implementation of the "Desktop Final Website" Figma frame.
-Font: **Exo 2** · Primary color: **#080E62** · Accent: **#F26522** (orange).
+Landing page for **StepAhead**, an AI-powered baby motor development tracking app. Built with Next.js 14 + Tailwind CSS, deployed on Vercel.
 
-This build contains **8 sections** (Trust Strip and Reviews intentionally
-omitted): NavBar · Hero · Features · How It Works · How We Help ·
-Mission Banner · FAQ · Footer.
+**Live site:** [step-ahead-website.vercel.app](https://step-ahead-website.vercel.app)
 
-## Quick start
+---
+
+## Tech Stack
+
+| | |
+|---|---|
+| Framework | Next.js 14 (App Router) |
+| Styling | Tailwind CSS with custom brand tokens |
+| Font | Exo 2 (Google Fonts) |
+| Backend | Next.js API Routes |
+| Database | Supabase (waitlist signups) |
+| Deployment | Vercel |
+
+---
+
+## Sections
+
+- **NavBar** — responsive with mobile hamburger, "Join the Waitlist" CTA
+- **Hero** — full-bleed image with tagline and CTA
+- **Features** — 4 product features with icons and phone mockups
+- **How It Works** — 3-step flow (Record → Analyze → Track) with background video
+- **How We Help** — AI insights + testimonial
+- **Mission Banner** — brand statement
+- **FAQ** — accordion with 3 Q&As
+- **Footer** — links, app store badges, contact email
+- **`/waitlist` page** — dedicated signup page (email capture → Supabase)
+
+---
+
+## Getting Started
 
 ```bash
 npm install
-npm run dev          # http://localhost:3000
+npm run dev       # http://localhost:3000
 ```
 
-## Deploy to Vercel
+---
 
-1. `git init && git add . && git commit -m "init"`
-2. Push to GitHub (e.g. `gh repo create stepahead --public --source=. --push`).
-3. Go to <https://vercel.com/new> → Import the repo → **Deploy**. No env
-   vars are needed for the base site.
+## Environment Variables
 
-## Project structure
-Editing copy or images? Open `content/site.json` — no React knowledge needed.
+Required for the waitlist form to store signups. Add to `.env.local` for local dev, and to Vercel project settings for production.
 
-## Asset export checklist (Figma → `public/images/`)
-
-Figma file: **Capstone** · Frame: **Desktop Final Website** (1536 × 5786px).
-Open Dev Mode, select each layer, click **Export** in the right panel.
-
-| Target path                               | What it is                                    | Format    |
-|-------------------------------------------|-----------------------------------------------|-----------|
-| public/images/logo.svg                    | "Step↗Ahead" wordmark                         | SVG       |
-| public/images/hero.jpg                    | Parent + baby photo (hero background)         | JPG @2x   |
-| public/images/feature-phones.png          | Two phones beside the feature list            | PNG @2x   |
-| public/images/icons/track.svg             | Feature row 1 icon                            | SVG       |
-| public/images/icons/compare.svg           | Feature row 2 icon                            | SVG       |
-| public/images/icons/share.svg             | Feature row 3 icon                            | SVG       |
-| public/images/icons/inform.svg            | Feature row 4 icon                            | SVG       |
-| public/images/phones/record-phone.png     | Record step: phone mockup                     | PNG @2x   |
-| public/images/phones/record-stick.png     | Record step: the stick under the phone        | PNG @2x   |
-| public/images/phones/analyze.png          | Analyze step: full phone screen with icons    | PNG @2x   |
-| public/images/phones/track.png            | Track step: full phone screen with icons      | PNG @2x   |
-| public/images/phones/help.png             | How We Help: combined 3-phone composite       | PNG @2x   |
-| public/images/sarah.jpg                   | Sarah & Emily testimonial avatar              | JPG/PNG   |
-| public/images/store.svg                   | Combined App Store + Google Play badges       | SVG       |
-
-> **Tip for Analyze / Track:** in Figma, select the **parent frame** for
-> each step (the one that wraps all the inner icons + phone screen) and
-> Export the whole frame as a single PNG @2x. That way you don't have to
-> reassemble the individual icons after unzipping.
-
-## Editing content without code
-
-Open `content/site.json` and change any string, image path, or list item.
-Save → the site reflects it on next render.
-
-## Drag-and-drop editing with Builder.io (optional)
-
-```bash
-npm i @builder.io/react @builder.io/sdk
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+WAITLIST_SECRET=your-secret-for-admin-endpoint
 ```
 
-1. Create a Space at <https://builder.io>.
-2. Add the **Public API Key** to `.env.local`:
-Also add it as an Environment Variable in your Vercel project.
-3. `builder-registry.ts` is pre-wired with all 8 sections. In Builder's
-   web UI, create a Page model and drag the registered components onto
-   the canvas. Editors can swap text, images and reorder sections — no
-   redeploy needed.
+**Supabase table** — run this SQL in your Supabase SQL Editor:
 
-## Optional: auto-fetch Figma assets
+```sql
+create table public.waitlist (
+  id bigint generated always as identity primary key,
+  created_at timestamptz default now(),
+  value text not null,
+  type text not null check (type in ('email', 'phone')),
+  timestamp text not null
+);
 
-Use `scripts/fetch-figma-assets.mjs` with a Figma personal access token
-(`figma.com/settings`) to download assets straight from the file:
-
-```bash
-FIGMA_TOKEN=figd_xxx node scripts/fetch-figma-assets.mjs
+alter table public.waitlist enable row level security;
 ```
 
-Replace the `TODO` node IDs inside the script with the IDs shown in the
-Figma URL bar (`?node-id=1494-1747` → use `1494:1747` here).
+**Retrieve all signups** (admin only):
+```
+GET /api/waitlist?secret=your-secret
+```
 
-## Troubleshooting
+---
 
-- **Images don't load** → you haven't exported assets yet. See checklist.
-- **Font looks wrong** → confirm `app/layout.tsx` is wiring the `Exo_2`
-  next/font import (it is, by default).
-- **Tailwind classes not applying** → ensure `content` paths in
-  `tailwind.config.ts` include `./app` and `./components`.
+## Editing Content
 
-## License
+All copy, images, and links live in one file — no React knowledge needed:
 
-Internal capstone project — adapt freely.
+```
+content/site.json
+```
+
+Change any text, image path, or list item → save → site reflects it on next render.
+
+---
+
+## Deployment
+
+Push to `main` → Vercel auto-deploys. No build config needed beyond env vars above.
+
+---
+
+## Contact
+
+[stepahead.app@gmail.com](mailto:stepahead.app@gmail.com)
