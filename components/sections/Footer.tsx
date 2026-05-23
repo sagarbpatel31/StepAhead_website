@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         {/* Legal row */}
-        <div className="mt-8 border-t border-white/20 pt-6">
+        <div className="mt-4 border-t border-white/20 pt-3">
           <ul className="flex flex-wrap gap-4 md:gap-6">
             {f.legal.map((l) => (
               <li key={l}>
