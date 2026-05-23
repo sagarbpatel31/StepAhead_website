@@ -16,7 +16,7 @@ const team = [
     name: "Sagar Patel",
     title: "CTO & Co-Founder",
     img: "/images/team/sagar.jpg",
-    objectPosition: "center 12%",
+    objectPosition: "center top",
     bio: "AI, computer vision, and production software systems expert. Builds the technology that turns everyday video into structured, shareable movement observations.",
   },
 ];
