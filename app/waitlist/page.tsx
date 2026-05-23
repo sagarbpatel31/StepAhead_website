@@ -12,7 +12,7 @@ export default function WaitlistPage() {
         <div className="w-full max-w-5xl rounded-2xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
 
           {/* Left — dark panel */}
-          <div className="bg-brand-deep px-10 py-12 lg:w-[45%] flex flex-col justify-center gap-6">
+          <div className="bg-brand-deep px-6 py-10 md:px-10 md:py-12 lg:w-[45%] flex flex-col justify-center gap-6">
             <p className="font-sans text-xs font-semibold uppercase tracking-widest text-white/60">
               Be First In Line
             </p>
@@ -37,7 +37,7 @@ export default function WaitlistPage() {
           </div>
 
           {/* Right — form panel */}
-          <div className="bg-white px-10 py-12 lg:w-[55%] flex flex-col justify-center gap-6">
+          <div className="bg-white px-6 py-10 md:px-10 md:py-12 lg:w-[55%] flex flex-col justify-center gap-6">
             <div>
               <h2 className="font-sans text-xl font-bold text-brand-deep">Your email</h2>
               <p className="mt-1 font-sans text-sm text-brand-deep/60">

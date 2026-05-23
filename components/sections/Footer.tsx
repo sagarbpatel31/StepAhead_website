@@ -56,7 +56,7 @@ export default function Footer() {
           ))}
 
           {/* Col 5 — contact */}
-          <div className="flex flex-col gap-3 sm:col-span-2 md:col-span-1 lg:col-span-1">
+          <div className="flex flex-col gap-3 md:col-span-1 lg:col-span-1">
             <a
               href={`mailto:${f.contact.email}`}
               className="font-sans text-base font-bold text-white hover:underline md:text-lg lg:text-xl"
