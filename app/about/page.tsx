@@ -42,7 +42,7 @@ export default function AboutPage() {
       <NavBar />
 
       {/* Hero — dark band */}
-      <section className="bg-brand-deep px-6 pb-20 pt-40 md:px-12 md:pb-24 md:pt-48 lg:px-20 lg:pb-28 lg:pt-52">
+      <section className="bg-brand-deep px-6 pb-14 pt-36 md:px-12 md:pb-16 md:pt-44 lg:px-20 lg:pb-20 lg:pt-48">
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-6 font-sans text-xs font-semibold uppercase tracking-widest text-brand-orange">
             About StepAhead
@@ -64,13 +64,9 @@ export default function AboutPage() {
       </div>
 
       {/* Our Story — full width centered */}
-      <section className="border-b border-gray-100 px-6 py-16 md:px-12 md:py-20 lg:px-20 lg:py-24">
+      <section className="border-b border-gray-100 px-6 py-10 md:px-12 md:py-14 lg:px-20 lg:py-16">
         <div className="mx-auto max-w-3xl">
-          <div className="mb-2 flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-brand-orange" />
-            <span className="font-sans text-xs font-semibold uppercase tracking-widest text-brand-orange">Our Story</span>
-          </div>
-          <h2 className="mb-6 font-sans text-3xl font-bold text-brand-deep md:text-4xl">Our Story</h2>
+          <h2 className="mb-5 font-sans text-3xl font-bold text-brand-deep md:text-4xl">Our Story</h2>
           <p className="font-sans text-base leading-relaxed text-gray-700 md:text-lg lg:text-xl">
             StepAhead was founded by Dalina Delfing and Sagar Patel. Dalina, a kinesiology PhD from Columbia&apos;s Center for Cerebral Palsy Research, has lived experience with cerebral palsy that went undetected in her own early childhood. After years of research at the intersection of computer vision and pediatric rehabilitation, she recognized a gap no tool had filled: families needed a way to document what they were observing, and clinicians lacked the objective movement data needed to make informed recommendations and treatment decisions. Together with Sagar, whose expertise spans AI, computer vision, and production software systems, they built StepAhead — a smartphone-based tool that turns everyday video into structured, shareable movement observations.
           </p>
@@ -78,28 +74,18 @@ export default function AboutPage() {
       </section>
 
       {/* Our Mission + Our Values — side by side */}
-      <section className="bg-gray-50 px-6 py-16 md:px-12 md:py-20 lg:px-20 lg:py-24">
-        <div className="mx-auto max-w-5xl grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+      <section className="bg-gray-50 px-6 py-10 md:px-12 md:py-14 lg:px-20 lg:py-16">
+        <div className="mx-auto max-w-5xl grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-14">
 
-          {/* Mission */}
           <div>
-            <div className="mb-2 flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-brand-orange" />
-              <span className="font-sans text-xs font-semibold uppercase tracking-widest text-brand-orange">Our Mission</span>
-            </div>
-            <h2 className="mb-5 font-sans text-3xl font-bold text-brand-deep md:text-4xl">Our Mission</h2>
+            <h2 className="mb-4 font-sans text-3xl font-bold text-brand-deep md:text-4xl">Our Mission</h2>
             <p className="font-sans text-base leading-relaxed text-gray-700 md:text-lg">
               StepAhead exists to help families and clinicians notice more, earlier. Our tool is designed to support — not replace — clinical judgment. By giving parents a way to capture and track movement patterns over time, and giving clinicians structured observations to inform their assessments, we help ensure no red flag goes unshared and no referral comes too late.
             </p>
           </div>
 
-          {/* Values */}
           <div>
-            <div className="mb-2 flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-brand-orange" />
-              <span className="font-sans text-xs font-semibold uppercase tracking-widest text-brand-orange">Our Values</span>
-            </div>
-            <h2 className="mb-5 font-sans text-3xl font-bold text-brand-deep md:text-4xl">Our Values</h2>
+            <h2 className="mb-4 font-sans text-3xl font-bold text-brand-deep md:text-4xl">Our Values</h2>
             <p className="font-sans text-base leading-relaxed text-gray-700 md:text-lg">
               Every child deserves early support. We&apos;re here to make sure nothing gets in the way of that. StepAhead is an observational tool grounded in peer-reviewed movement science. Every feature we build is designed with one principle in mind: get the right information to the right clinician at the right time, so families can access the care their child may need.
             </p>
@@ -109,7 +95,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="bg-brand-tint px-6 py-16 md:px-12 md:py-20 lg:px-20 lg:py-24">
+      <section className="bg-brand-tint px-6 py-10 md:px-12 md:py-14 lg:px-20 lg:py-16">
         <div className="mx-auto max-w-4xl">
           <p className="mb-2 text-center font-sans text-xs font-semibold uppercase tracking-widest text-brand-orange">
             The Team
@@ -149,7 +135,7 @@ export default function AboutPage() {
       </section>
 
       {/* Bottom CTA band */}
-      <section className="bg-brand-deep px-6 py-14 text-center md:px-12 md:py-16 lg:py-20">
+      <section className="bg-brand-deep px-6 py-10 text-center md:px-12 md:py-12 lg:py-14">
         <p className="mx-auto max-w-2xl font-sans text-lg font-bold leading-snug text-white md:text-xl lg:text-2xl">
           Every child deserves early support. We&apos;re here to make sure nothing gets in the way of that.
         </p>
