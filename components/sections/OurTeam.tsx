@@ -19,7 +19,7 @@ const team = [
 
 export default function OurTeam() {
   return (
-    <section className="bg-white px-6 pt-10 pb-6 md:px-12 md:pt-12 md:pb-8 lg:px-20 lg:pt-16 lg:pb-10">
+    <section className="bg-white px-6 pt-10 pb-2 md:px-12 md:pt-12 md:pb-4 lg:px-20 lg:pt-16 lg:pb-6">
       <div className="mx-auto max-w-[1182px]">
 
         {/* Heading */}
