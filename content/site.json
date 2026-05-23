@@ -57,9 +57,18 @@
   "faq": {
     "title": "FAQ",
     "items": [
-      "How does StepAhead track my baby's motor development?",
-      "How quickly will I receive insights after uploading a video?",
-      "Is StepAhead suitable for all ages of infants?"
+      {
+        "q": "How does StepAhead track my baby's motor development?",
+        "a": "StepAhead analyzes short videos of your baby to measure key movement patterns — such as coordination, symmetry, and posture — that are used by clinicians to assess motor development. The app tracks how these patterns change over time, building a personalized developmental profile unique to your child. Results are presented in clear, plain-language summaries that you can review at home or share with your pediatrician."
+      },
+      {
+        "q": "How quickly will I receive insights after uploading a video?",
+        "a": "Once you upload a video, StepAhead's AI securely processes your baby's movement data in the cloud — your footage is encrypted and never shared or sold. Insights are delivered directly within the app, typically within minutes of submission."
+      },
+      {
+        "q": "Is StepAhead suitable for all ages of infants?",
+        "a": "StepAhead is designed for infants from birth through 24 months — the period of greatest neuroplasticity and the window during which motor development is most active and most responsive to early support. The app's tracking adapts to your child's age, reflecting the movement milestones and patterns appropriate for each stage of development."
+      }
     ]
   },
   "footer": {
