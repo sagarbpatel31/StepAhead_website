@@ -5,7 +5,12 @@ import site from "@/content/site.json";
 function footerLinkHref(label: string): string {
   if (label === "About Us") return "/about";
   if (label === "FAQ") return "/#faq";
+  if (label === "Demo") return "/waitlist";
   return "#";
+}
+
+function legalHref(label: string): string {
+  return `/${label.toLowerCase()}`;
 }
 
 export default function Footer() {
@@ -80,9 +85,9 @@ export default function Footer() {
           <ul className="flex flex-wrap gap-4 md:gap-6">
             {f.legal.map((l) => (
               <li key={l}>
-                <a href="#" className="font-sans text-xs text-white/70 hover:text-white hover:underline md:text-sm">
+                <Link href={legalHref(l)} className="font-sans text-xs text-white/70 hover:text-white hover:underline md:text-sm">
                   {l}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
