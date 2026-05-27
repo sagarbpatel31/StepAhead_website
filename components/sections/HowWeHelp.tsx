@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PhoneFrame from "@/components/PhoneFrame";
 import site from "@/content/site.json";
 
 export default function HowWeHelp() {
@@ -14,9 +15,9 @@ export default function HowWeHelp() {
           {s.subtitle}
         </p>
 
-        {/* Phones — centered */}
+        {/* Phones — all 3 centered */}
         <div className="mt-10 flex justify-center md:mt-16">
-          <div className="relative w-full max-w-sm md:max-w-md lg:max-w-xl">
+          <div className="relative w-full max-w-lg md:max-w-2xl lg:max-w-3xl">
             <Image
               src={s.image}
               alt="StepAhead app screens"
@@ -25,6 +26,10 @@ export default function HowWeHelp() {
               priority
               className="w-full h-auto"
             />
+            {/* 3rd phone — overlaid right side */}
+            <div className="absolute bottom-0 right-0 translate-x-1/4">
+              <PhoneFrame screen="/images/phones/movement.png" orientation="portrait" />
+            </div>
           </div>
         </div>
       </div>
