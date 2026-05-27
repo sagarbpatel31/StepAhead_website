@@ -19,6 +19,13 @@ const team = [
     objectPosition: "center top",
     bio: "AI, computer vision, and production software systems expert. Builds the technology that turns everyday video into structured, shareable movement observations.",
   },
+  {
+    name: "Nicole Metelski, PhD, OT",
+    title: "Clinical Consultant",
+    img: "/images/team/nicole.jpg",
+    objectPosition: "center top",
+    bio: "PhD in Biobehavioral Sciences, Columbia. Postdoctoral researcher at Burke Neurological examining motor function in children with disabilities. 6 years OT at NewYork-Presbyterian neuro.",
+  },
 ];
 
 const sections = [

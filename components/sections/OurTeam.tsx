@@ -15,6 +15,13 @@ const team = [
     objectPosition: "center top",
     bio: "Sagar brings deep expertise in computer vision, embedded AI, and production software systems. He owns StepAhead's full technical stack, from model training to mobile app, and has built and shipped AI pipelines across the complete product lifecycle.",
   },
+  {
+    name: "Nicole Metelski, PhD, OT",
+    title: "Clinical Consultant",
+    img: "/images/team/nicole.jpg",
+    objectPosition: "center top",
+    bio: "Nicole holds a PhD in Biobehavioral Sciences from Columbia University and brings 6 years of clinical occupational therapy experience at NewYork-Presbyterian's neurology division. As a postdoctoral researcher at Burke Neurological Institute examining motor function in children with disabilities, she ensures StepAhead's insights are grounded in rigorous clinical science.",
+  },
 ];
 
 export default function OurTeam() {
