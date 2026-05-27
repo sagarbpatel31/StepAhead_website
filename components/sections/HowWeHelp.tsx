@@ -1,4 +1,3 @@
-import Image from "next/image";
 import PhoneFrame from "@/components/PhoneFrame";
 import site from "@/content/site.json";
 
@@ -15,16 +14,10 @@ export default function HowWeHelp() {
           {s.subtitle}
         </p>
 
-        {/* 3 phones in a row — composite (2 phones) + PhoneFrame */}
-        <div className="mt-10 flex flex-col items-center gap-8 md:mt-16 md:flex-row md:justify-center md:items-start md:gap-6 lg:gap-10">
-          <Image
-            src={s.image}
-            alt="StepAhead app screens"
-            width={620}
-            height={554}
-            priority
-            className="w-full max-w-sm h-auto md:max-w-md lg:max-w-lg md:pt-16 lg:pt-20"
-          />
+        {/* 3 phones in a uniform row */}
+        <div className="mt-10 flex flex-col items-center gap-8 md:mt-16 md:flex-row md:justify-center md:items-end md:gap-8 lg:gap-12">
+          <PhoneFrame screen="/images/phones/trunk-stability.png" orientation="portrait" />
+          <PhoneFrame screen="/images/phones/transitions.png" orientation="portrait" />
           <PhoneFrame screen="/images/phones/movement.png" orientation="portrait" />
         </div>
       </div>
