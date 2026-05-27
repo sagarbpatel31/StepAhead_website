@@ -5,7 +5,8 @@ import site from "@/content/site.json";
 function footerLinkHref(label: string): string {
   if (label === "About Us") return "/about";
   if (label === "FAQ") return "/#faq";
-  if (label === "Demo") return "/waitlist";
+  if (label === "Features") return "/features";
+  if (label === "Demo") return "https://youtube.com/shorts/nQYYc2qld1o?si=qkXzYFL1LA3djxeH";
   return "#";
 }
 
@@ -49,13 +50,24 @@ export default function Footer() {
                 {c.title}
               </h5>
               <ul className="space-y-2">
-                {c.links.map((l) => (
-                  <li key={l}>
-                    <Link href={footerLinkHref(l)} className="font-sans text-sm text-white/80 hover:text-white hover:underline md:text-base">
-                      {l}
-                    </Link>
-                  </li>
-                ))}
+                {c.links.map((l) => {
+                  const href = footerLinkHref(l);
+                  const external = href.startsWith("http");
+                  return (
+                    <li key={l}>
+                      {external ? (
+                        <a href={href} target="_blank" rel="noopener noreferrer"
+                          className="font-sans text-sm text-white/80 hover:text-white hover:underline md:text-base">
+                          {l}
+                        </a>
+                      ) : (
+                        <Link href={href} className="font-sans text-sm text-white/80 hover:text-white hover:underline md:text-base">
+                          {l}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

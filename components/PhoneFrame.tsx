@@ -2,12 +2,14 @@ import Image from "next/image";
 
 type Props = {
   screen: string;
+  screenVideo?: string;
   orientation?: "portrait" | "landscape";
   className?: string;
 };
 
 export default function PhoneFrame({
   screen,
+  screenVideo,
   orientation = "portrait",
   className = "",
 }: Props) {
@@ -19,13 +21,22 @@ export default function PhoneFrame({
           className="absolute left-0 top-0 origin-top-left scale-[0.7] md:scale-[0.85] lg:scale-100"
           style={{ width: 422, height: 195 }}
         >
-          {/* Screen — plain img avoids Next fill positioning issues */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={screen}
-            alt=""
-            style={{ position: "absolute", left: 11, top: 11, width: 400, height: 173, borderRadius: 18, objectFit: "cover" }}
-          />
+          {/* Screen — video or image */}
+          {screenVideo ? (
+            <video
+              autoPlay muted loop playsInline
+              style={{ position: "absolute", left: 11, top: 11, width: 400, height: 173, borderRadius: 18, objectFit: "cover" }}
+            >
+              <source src={screenVideo} type="video/mp4" />
+            </video>
+          ) : (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img
+              src={screen}
+              alt=""
+              style={{ position: "absolute", left: 11, top: 11, width: 400, height: 173, borderRadius: 18, objectFit: "cover" }}
+            />
+          )}
           {/* Frame overlay */}
           <Image
             src="/images/phones/frame-landscape.svg"

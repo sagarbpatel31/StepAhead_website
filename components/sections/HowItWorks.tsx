@@ -38,6 +38,7 @@ export default function HowItWorks() {
               <div className="mt-6 flex flex-col items-center">
                 <PhoneFrame
                   screen={step.image}
+                  screenVideo={i === 0 ? "/videos/how-it-works.mp4" : undefined}
                   orientation={i === 0 ? "landscape" : "portrait"}
                   className="max-w-full"
                 />
@@ -62,7 +63,7 @@ export default function HowItWorks() {
 
           <div className="mt-8 grid grid-cols-3 items-start gap-8 xl:gap-16">
             <div className="mt-20 xl:mt-24 flex flex-col items-center">
-              <PhoneFrame screen={record.image} orientation="landscape" />
+              <PhoneFrame screen={record.image} screenVideo="/videos/how-it-works.mp4" orientation="landscape" />
               {record.extra && <Image src={record.extra} alt="" width={100} height={144} />}
             </div>
             <div className="flex justify-center">

@@ -7,6 +7,8 @@ import site from "@/content/site.json";
 function navHref(label: string): string {
   if (label === "About Us") return "/about";
   if (label === "FAQ") return "/#faq";
+  if (label === "Product") return "/#how-it-works";
+  if (label === "Features") return "/features";
   return `/#${label.toLowerCase().replace(/\s+/g, "-")}`;
 }
 

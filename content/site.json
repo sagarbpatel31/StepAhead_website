@@ -1,6 +1,6 @@
 {
   "nav": {
-    "links": ["Product", "Resources", "About Us", "FAQ"],
+    "links": ["Product", "Features", "Resources", "About Us", "FAQ"],
     "cta": "Join the Waitlist"
   },
   "hero": {
@@ -76,8 +76,8 @@
   "store": { "img": "/images/store.svg", "alt": "Download on the App Store and Google Play" },
   "columns": [
     { "title": "Product",   "links": ["Demo"] },
-    { "title": "Resources", "links": ["Articles", "Knowledge Base", "Validation"] },
-    { "title": "StepAhead", "links": ["About Us", "FAQ"] }
+    { "title": "Resources", "links": ["Articles"] },
+    { "title": "StepAhead", "links": ["About Us", "Features", "FAQ"] }
   ],
   "contact": {
     "email": "stepahead.app@gmail.com",
