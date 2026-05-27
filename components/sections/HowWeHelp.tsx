@@ -1,5 +1,4 @@
 import Image from "next/image";
-import PhoneFrame from "@/components/PhoneFrame";
 import site from "@/content/site.json";
 
 export default function HowWeHelp() {
@@ -15,44 +14,18 @@ export default function HowWeHelp() {
           {s.subtitle}
         </p>
 
-        {/* Mobile: stacked. Desktop: side by side */}
-        <div className="mt-10 flex flex-col items-center gap-10 md:mt-16 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
-
-          {/* Phones — composite + overlay */}
-          <div className="relative w-full max-w-sm md:max-w-md lg:w-auto lg:flex-shrink-0">
+        {/* Phones — centered */}
+        <div className="mt-10 flex justify-center md:mt-16">
+          <div className="relative w-full max-w-sm md:max-w-md lg:max-w-xl">
             <Image
               src={s.image}
               alt="StepAhead app screens"
               width={620}
               height={554}
               priority
-              className="w-full h-auto lg:w-[440px] xl:w-[560px]"
+              className="w-full h-auto"
             />
-            {/* Purple-framed phone — hidden on mobile, shown lg+ only to avoid overflow */}
-            <div className="absolute bottom-0 right-0 hidden lg:block lg:right-[-60px] xl:right-[-80px]">
-              <PhoneFrame screen="/images/phones/movement.png" orientation="portrait" />
-            </div>
           </div>
-
-          {/* Testimonial */}
-          <figure className="w-full min-w-0 max-w-sm md:max-w-md lg:max-w-[420px] xl:max-w-[500px]">
-            <div className="mb-6 flex flex-col items-center gap-4">
-              <Image
-                src={s.testimonial.avatar}
-                alt=""
-                width={120}
-                height={120}
-                className="rounded-full object-cover w-20 h-20 md:w-28 md:h-28 lg:w-[120px] lg:h-[120px]"
-              />
-              <figcaption className="font-sans text-xl font-bold text-blue-950 md:text-2xl">
-                {s.testimonial.name}
-              </figcaption>
-            </div>
-            <blockquote className="font-sans text-lg italic leading-relaxed text-blue-950 md:text-xl lg:text-2xl">
-              &ldquo;{s.testimonial.quote}&rdquo;
-            </blockquote>
-          </figure>
-
         </div>
       </div>
     </section>
