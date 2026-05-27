@@ -1,3 +1,4 @@
+import Image from "next/image";
 import PhoneFrame from "@/components/PhoneFrame";
 import site from "@/content/site.json";
 
@@ -16,8 +17,12 @@ export default function HowWeHelp() {
 
         {/* 3 phones in a uniform row */}
         <div className="mt-10 flex flex-col items-center gap-8 md:mt-16 md:flex-row md:justify-center md:items-end md:gap-8 lg:gap-12">
-          <PhoneFrame screen="/images/phones/trunk-stability.png" orientation="portrait" />
-          <PhoneFrame screen="/images/phones/transitions.png" orientation="portrait" />
+          {/* First two already have phone frame baked into the image */}
+          <Image src="/images/phones/trunk-stability.png" alt="Trunk Stability screen" width={195} height={422}
+            className="h-[317px] w-auto md:h-[359px] lg:h-[422px]" />
+          <Image src="/images/phones/transitions.png" alt="Transitions screen" width={195} height={422}
+            className="h-[317px] w-auto md:h-[359px] lg:h-[422px]" />
+          {/* movement.png is screen-only — needs PhoneFrame */}
           <PhoneFrame screen="/images/phones/movement.png" orientation="portrait" />
         </div>
       </div>
