@@ -6,6 +6,7 @@ function footerLinkHref(label: string): string {
   if (label === "About Us") return "/about";
   if (label === "FAQ") return "/#faq";
   if (label === "Features") return "/features";
+  if (label === "Articles") return "/resources";
   if (label === "Demo") return "https://youtube.com/shorts/nQYYc2qld1o?si=qkXzYFL1LA3djxeH";
   return "#";
 }

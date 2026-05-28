@@ -9,6 +9,7 @@ function navHref(label: string): string {
   if (label === "FAQ") return "/#faq";
   if (label === "Product") return "/#how-it-works";
   if (label === "Features") return "/features";
+  if (label === "Resources") return "/resources";
   return `/#${label.toLowerCase().replace(/\s+/g, "-")}`;
 }
 
