@@ -111,7 +111,7 @@ export default function AboutPage() {
             Our Founders
           </h2>
 
-          <div className="flex flex-col items-center gap-12 md:flex-row md:justify-center md:gap-16 lg:gap-24">
+          <div className="flex flex-col items-center gap-12 md:flex-row md:items-start md:justify-center md:gap-16 lg:gap-24">
             {team.map((member) => (
               <div key={member.name} className="flex flex-col items-center text-center">
                 {/* Photo */}
