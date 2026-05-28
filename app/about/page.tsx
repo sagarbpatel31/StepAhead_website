@@ -23,7 +23,7 @@ const team = [
     name: "Nicole Metelski, PhD, OT",
     title: "Clinical Consultant",
     img: "/images/team/nicole.jpg",
-    objectPosition: "center top",
+    objectPosition: "center 15%",
     bio: "PhD in Biobehavioral Sciences, Columbia. Postdoctoral researcher at Burke Neurological examining motor function in children with disabilities. 6 years OT at NewYork-Presbyterian neuro.",
   },
 ];

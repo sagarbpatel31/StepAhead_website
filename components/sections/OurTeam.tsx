@@ -19,7 +19,7 @@ const team = [
     name: "Nicole Metelski, PhD, OT",
     title: "Clinical Consultant",
     img: "/images/team/nicole.jpg",
-    objectPosition: "center top",
+    objectPosition: "center 15%",
     bio: "Nicole holds a PhD in Biobehavioral Sciences from Columbia University and brings 6 years of clinical occupational therapy experience at NewYork-Presbyterian's neurology division. As a postdoctoral researcher at Burke Neurological Institute examining motor function in children with disabilities, she ensures StepAhead's insights are grounded in rigorous clinical science.",
   },
 ];
