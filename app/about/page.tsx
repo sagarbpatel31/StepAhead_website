@@ -60,6 +60,9 @@ export default function AboutPage() {
           <p className="mx-auto mt-8 max-w-2xl font-sans text-base leading-relaxed text-white/70 md:text-lg lg:text-xl">
             StepAhead helps parents and clinicians observe, track, and document movement patterns in infants and young children. It supports clinical conversations — it doesn&apos;t replace them.
           </p>
+          <p className="mx-auto mt-4 max-w-xl font-sans text-sm leading-relaxed text-white/50 md:text-base">
+            StepAhead is an observational tool, not a diagnostic one. It does not diagnose any medical condition.
+          </p>
         </div>
       </section>
 

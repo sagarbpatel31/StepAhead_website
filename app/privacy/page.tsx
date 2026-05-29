@@ -100,6 +100,9 @@ export default function PrivacyPage() {
                 <ul className="list-disc pl-6">
                   <li>health data</li>
                 </ul>
+                <p className="mt-4">
+                  <strong>Biometric Data — State-Specific Notice.</strong> To the extent StepAhead collects or processes biometric identifiers or biometric information (such as data derived from video analysis of body movement), we comply with applicable state biometric privacy laws. Residents of <strong>Illinois</strong> have rights under the Biometric Information Privacy Act (BIPA), which governs the collection, retention, disclosure, and destruction of biometric identifiers and information; violations may result in statutory damages of $1,000–$5,000 per violation and Illinois residents have a private right of action. Residents of <strong>Texas</strong> have rights under the Texas Capture or Use of Biometric Identifier Act (CUBI), and residents of <strong>Washington</strong> have rights under the Washington My Health MY Data Act and related biometric statutes. We collect biometric data only with your informed consent, retain it only as long as necessary for the purpose collected, and do not sell or disclose it to third parties except as required by law or with your explicit authorization. To exercise your biometric data rights or request deletion, contact us at{" "}<a href="mailto:stepahead.app@gmail.com" className="text-blue-600 underline hover:text-blue-800">stepahead.app@gmail.com</a>.
+                </p>
               </div>
 
               <p>
